@@ -69,4 +69,10 @@ console.log(`Dad gets ${dadGets}`);
 
 // Everything in Javascript is an Object (OOP)
 
-// Objecst are Used for Collections of Data
+// Objecst are Used for Collections of Data. Related data
+
+const person = {
+    first: 'Erik',
+    last: 'Dodd',
+    age: 100
+};
