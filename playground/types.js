@@ -76,3 +76,55 @@ const person = {
     last: 'Dodd',
     age: 100
 };
+
+// Order doesn't matter in an object. If you want order to matter, use an Array
+
+
+// ********NULL & UNDEFINED ***********
+
+// There are two ways to express the 'nothing' in JS: undefined & null
+
+let dog; // This will produce 'undefined' when console.log(). Variable has been created but not defined
+dog = "Gucci Mane"; // Now it has been defined
+
+let somethingUndefined; // Has no value set to it
+const somethingNull = null; // Has a value of 'null' set to it
+
+const cher = {
+    first: Cher,
+};
+
+// cher.last == undefined >>> she doesn't have a last name
+
+const teller = {
+    first: "Raymond",
+    last: "Teller",
+};
+
+// Teller changed his legal name from Raymond Teller to just Teller.
+
+teller.first = "Teller";
+teller.last = null;
+
+
+
+// ********BOOLEAN ***********
+
+// It's True or False. Used for logic like If Statements
+
+// This is a 'Flag Variable'... it's either set to True or False
+let isDrawing = false;
+
+// Can Calculate Boolean
+const age2 = 18;
+const ofAge = age2 > 18;
+console.log(age2);
+const age3 = 34;
+age2 === age3; // returns True
+
+// === checks that the values and the type are the same
+10 === 10 // returns True
+10 === '10' // returns False
+
+// == only checks if the values are the same 
+10 == 10 // returns True
