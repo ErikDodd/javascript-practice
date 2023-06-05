@@ -13,7 +13,7 @@ console.log("it works!");
 // }
 
 // Function Expression = where you store a function as a value in a variable. These are NOT HOISTED
-const doctorize = function(firstName) {
+const doctorize = function (firstName) {
     return `Dr. ${firstName}`;
 }
 
@@ -40,7 +40,7 @@ const inchToCm = (inches) => inches * 2.54;
 // }
 
 // Arrow Function
-const add = (a, b = 3) =>  a + b;
+const add = (a, b = 3) => a + b;
 
 
 // function makeABaby(first, last) {
@@ -52,12 +52,12 @@ const add = (a, b = 3) =>  a + b;
 // }
 
 // For implicit return, pop a set of parentheses around the thing you are returning...example a baby
-const makeABaby = (first, last) =>  ({ name: `${first} ${last}`, age: 0 });
+const makeABaby = (first, last) => ({ name: `${first} ${last}`, age: 0 });
 
 // IIFE (Immediately Invoked Function Expression) = 
 // Start by wrapping it in a parentheses and finish by putting parentheses on the end
 
-(function(age) {
+(function (age) {
     console.log('Running this Anonymous Function');
     return `You are Cool and age ${age}`;
 })(10);
@@ -67,8 +67,39 @@ const makeABaby = (first, last) =>  ({ name: `${first} ${last}`, age: 0 });
 
 const erik = {
     name: 'Erik Dodd',
-    sayHi: function() {
+    sayHi: function () {
         console.log('Hey Erik!');
         return 'Hey Erik!';
+    },
+    // Short hand Method (MOST COMMON WAY)
+    yellHi() {
+        console.log('Hey Errrrrikkkkk!');
+    },
+    // Arrow function
+    whisperHi: () => {
+        console.log('hiii erik...')
     }
 };
+
+
+// Callback Function =  When somebody clicks something, run this...or when this amount of time has passed, run this
+
+const button = document.querySelector('.clickMe');
+
+function handleClick() {
+    console.log('Great Clicking!!');
+}
+
+button.addEventListener('click', handleClick);
+
+// Or you can pass an anonymous function like below:
+
+button.addEventListener('click', function() {
+    console.log('NICEEEE!')
+});
+
+
+// Timer Callback
+
+// Takes in a function to call and a duration in milliseconds
+setTimeout(erik.yellHi, 1000)
