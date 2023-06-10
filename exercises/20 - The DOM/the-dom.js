@@ -66,3 +66,34 @@ function toggleRound() {
 }
 
 pic.addEventListener('click', toggleRound);
+
+
+// ATTRIBUTES 
+
+// This is a 'setter'
+pic.alt = 'rock formation, nature, and sky';
+pic.width = 500;
+
+// This is a 'getter'
+console.log(pic.alt);
+
+
+pic.addEventListener('load',function() {
+    console.log(pic.naturalWidth); // getter
+});
+
+// getAttribute()
+console.log(pic.getAttribute('alt'));
+
+// setAttribute()
+pic.setAttribute('alt', 'SOME NATURE TINGSSS');
+
+console.log(pic.getAttribute('alt'));
+
+const custom = document.querySelector('.custom');
+// .dataset returns an object that is full of all the property values you have
+console.log(custom.dataset);
+
+custom.addEventListener('click', function() {
+    alert(`Welcome ${custom.dataset.name} ${custom.dataset.last}`);
+});
