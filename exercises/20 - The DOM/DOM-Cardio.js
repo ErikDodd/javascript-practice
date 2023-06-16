@@ -54,15 +54,30 @@ const htmlString = `
 `;
 
 // put this div before the unordered list from above
-unorderedList.insertAdjacentElement('beforebegin', htmlString);
+div.innerHTML = htmlString;
+const myFragment = document.createRange().createContextualFragment(htmlString);
+document.body.appendChild(myFragment);
+// 
 
 // add a class to the second paragraph called warning
 image.classList.add('warning');
 
 
 // remove the first paragraph
+const firstParagraph = myFragment.firstElementChild;
 
 // create a function called generatePlayerCard that takes in three arguments: name, age, and height
+
+function generatePlayerCard(name, age, height) {
+    const newNewDiv = document.createElement('div');
+    newNewDiv.classList.add("playerCard");
+    const h2 = document.createElement('h2');
+    h2.textContent = "${name} - ${age}";
+    const p = document.createElement('p');
+    const ageInDogYears = age * 7;
+    p.textContent = `They are ${height} and ${age} years old. In Dog years this person would be ${ageInDogYears}. That would be a tall dog!`;
+
+};
 
 // have that function return html that looks like this:
 // <div class="playerCard">
@@ -71,6 +86,9 @@ image.classList.add('warning');
 // </div>
 
 // make a new div with a class of cards
+
+const anotherNewDiv = document.createElement('div');
+anotherNewDiv.classList.add('.cards')
 
 // make 4 player cards using generatePlayerCard
 
