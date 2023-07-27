@@ -39,11 +39,35 @@
   }
 
   function slugify(sentence, lowercase) {
+    let slug = sentence.replace(/\s/g, '-')
     if (lowercase) {
-      return sentence.replace(/\s/g, '-').toLowerCase();
+      return slug.toLowerCase();
     } else {
-      return sentence.replace(/\s/g, '-');
+      return slug;
     }
+  }
+
+  const name = 'Erik';
+  const last = 'Dodd';
+  if (name === 'Josh' || (name === 'Erik' && last === 'Dodd')) {
+    console.log('Cool name!')
+  }
+ 
+  const isAwesomeName = 'rik'.includes(name);
+  if (isAwesomeName) {
+    console.log('Super cool, awesome name')
+  }
+
+  function nameIsAwesome(name) {
+    return 'rik'.includes(name);
+  }
+
+  const dog = 'Puffy'
+
+  if(dog) {
+    console.log("You have a dog !")
+  } else {
+    console.log("You don't have a dog !")
   }
   </script>
 </body>
