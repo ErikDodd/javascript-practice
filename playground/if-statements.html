@@ -117,6 +117,13 @@
       } else {
         console.log('Some checks failed');
       }
+
+      // isAdmin ? showAdminBar() : null;
+      isAdmin && showAdminBar();
+
+      if(isAdmin) {
+        showAdminBar();
+      }
     </script>
   </body>
 </html>
